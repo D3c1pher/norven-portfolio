@@ -4,14 +4,14 @@ const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
   const savedTheme = localStorage.getItem('theme');
-  const [theme, setTheme] = useState(savedTheme || 'light');
+  const [theme, setTheme] = useState(savedTheme || 'cmyk');
 
   useEffect(() => {
     localStorage.setItem('theme', theme);
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme(prevTheme => (prevTheme === 'light' ? 'night' : 'light'));
+    setTheme(prevTheme => (prevTheme === 'cmyk' ? 'night' : 'cmyk'));
   };
 
   return (
