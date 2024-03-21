@@ -16,19 +16,12 @@ const textVariants = {
       staggerChildren: 0.1,
     },
   },
-  scrollButton: {
-    opacity: 0,
-    y: 10,
-    transition: {
-      duration: 2,
-      repeat: Infinity,
-    },
-  },
 };
 
 const sliderVariants = {
   initial: {
     x: 1,
+    y: -50,
   },
   animate: {
     x: "-220%",
@@ -74,11 +67,13 @@ export default function Hero() {
         </motion.div>
 
         {/* DESKTOP IMAGE */}
-        <div className="hidden lg:block h-full lg:absolute lg:pt-20 lg:pr-20 right-0 bottom-0 z-10">
+        <div className="hidden lg:block h-full lg:absolute lg:pt-20 lg:pr-20 right-0 bottom-0 z-20">
           <img src={Profile} alt="Norven Profile Image" className="w-full h-full object-cover" />
         </div>
-
       </div>
+
+      {/* CURVE DESIGN */}
+      <svg className="block self-end text-secondary" viewBox="0 0 1440 320"><path fill="currentColor" d="M0,256L120,266.7C240,277,480,299,720,256C960,213,1200,107,1320,53.3L1440,0L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
     </div>
   );
 };
