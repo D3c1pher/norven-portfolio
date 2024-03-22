@@ -1,6 +1,7 @@
 html {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
+  cursor: none;
 }
 
 * {
@@ -19,4 +20,19 @@ section {
   height: 100vh;
   scroll-snap-align: center;
   overflow: hidden;
+}
+
+.texture-v1 {
+	background-image: url(./assets/paper-texture-01.png);
+	background-repeat: repeat; 
+}
+
+.texture-v2 {
+	background-image: url(./assets/paper-texture-02.png);
+	background-repeat: repeat; 
+}
+
+.texture-v3 {
+	background-image: url(./assets/paper-texture-03.png);
+	background-repeat: repeat; 
 }
